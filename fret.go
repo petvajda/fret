@@ -2,7 +2,7 @@ package fret
 
 import "fmt"
 
-// Returns all chromatic notes starting with baseNote
+// Return all chromatic notes starting with baseNote
 func GetChromaticNotes(baseNote string) []string {
 	notes := []string{"C", "D", "E", "F", "G", "A", "B"}
 	chromaticNotes := make([]string, 12)
@@ -27,7 +27,7 @@ func GetChromaticNotes(baseNote string) []string {
 	return []string{"Error: Wrong note name " + baseNote}
 }
 
-// Scramble and returns notes for baseNote
+// Scramble and return notes for baseNote
 func Scramble(baseNote string) string {
 	frets := [...]int{10, 3, 7, 2, 9, 5, 11, 1, 8, 4, 12, 6}
 	notes := GetChromaticNotes(baseNote)
